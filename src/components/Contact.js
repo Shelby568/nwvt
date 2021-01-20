@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../styles/Contact.css';
 
 const Contact = () => {
     const initialState = {
@@ -44,18 +45,12 @@ const Contact = () => {
     return (
     <div className="contact">
         <form className="contact-form" onSubmit={handleSubmit} method="POST">
-            <div className="form-group">
         <label htmlFor="name">Name</label>
-        <input type="text" className="form-control" value={formControl.name} onChange={onNameChange} />
-        </div>
-        <div className="form-group">
-        <label htmlFor="email">Email Address</label>
-        <input type="email" className="form-control" aria-describedby="emailHelp" value={formControl.email} onChange={onEmailChange} />
-        </div>
-        <div className="form-group">
+        <input type="text" className="form-control" placeholder="Your name..." value={formControl.name} onChange={onNameChange} />
+        <label htmlFor="email">Email</label>
+        <input type="email" className="form-control" placeholder="email@domain.com" aria-describedby="emailHelp" value={formControl.email} onChange={onEmailChange} />
         <label htmlFor="message">Message</label>
-        <textarea className="form-control" rows="5" value={formControl.message} onChange={onChangeMessage}></textarea>
-        </div>
+        <textarea className="form-control" rows="5" placeholder="Write your message here..." value={formControl.message} onChange={onChangeMessage}></textarea>
         <button type="submit" className="submit-button">Submit</button>
         </form>
     </div>
