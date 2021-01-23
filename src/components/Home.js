@@ -27,14 +27,12 @@ const Home = () => {
    function showModalOne(showModal) {
        showModal({
            component: ModalOne,
-           modalProps: customStyles,
        });
    };
 
    function showModalTwo(showModal) {
        showModal({
            component: ModalTwo,
-           modalProps: customStyles,
        });
    };
 
