@@ -1,60 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../images/logo.png'
 import background from '../images/background2.png'
 import '../styles/Home.css';
 import InfoModal from '../components/InfoModal';
-import Contact from '../components/Contact';
-import { ModalContext, ModalProvider, ModalRoot } from 'react-multi-modal';
+import Modal from 'react-modal';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
-   function ModalOne({ isOpen, hideModal }) {
-        return (
-            isOpen && (
-                <InfoModal />
-            )
-        );
-   };
+    const [ modalIsOpen, setIsOpen ] = useState(false);
 
-   function ModalTwo({ isOpen, hideModal }) {
-       return (
-           isOpen && (
-               <Contact />
-           )
-       );
-   };
+    const customStyles = {
+        content: {
+            height: '45%',
+            width: '45%',
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+            overflow: 'hidden',
+        },
+    };
 
-   function showModalOne(showModal) {
-       showModal({
-           component: ModalOne,
-       });
-   };
+    const openModal = () => {
+        setIsOpen(true);
+    };
 
-   function showModalTwo(showModal) {
-       showModal({
-           component: ModalTwo,
-       });
-   };
+    const closeModal = () => {
+        setIsOpen(false);
+    };
 
     return (
     <div className="home">
         <img src={logo} className="logo-image" alt="logo" />
         <h2 className="logo-intro">Be confident knowing your vehicle is protected</h2>
-<ModalProvider>
-    <ModalContext>
-    {({ showModal, hideModal }) => (
-    <>
-        <button className="but1" onClick={() => {showModalOne(showModal)}}>Let's talk trackers</button>
+        <button className="but1" onClick={() => {openModal()}}>Let's talk trackers</button>
     <div className="divider" />
-        <button className="but2" onClick={() => {showModalTwo(showModal)}}>Contact us</button>
-    <ModalRoot />
-    </>
-    )}
-    </ModalContext>
-</ModalProvider>
+        <Link to='/contact-us'>
+        <button className="but2">Contact us</button>
+        </Link>
         <img src={background} className="background-image" alt="car" />
+        <Modal
+     shouldCloseOnOverlayClick={true}
+     isOpen={modalIsOpen}
+     onRequestClose={closeModal}
+     style={customStyles}
+     ariaHideApp={false}
+        >
+     <InfoModal />
+        </Modal>
     </div>
-    )
+    );
 };
 
 export default Home;
