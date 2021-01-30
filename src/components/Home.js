@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../images/logo.png'
+import Logo from '../components/Logo';
 import background from '../images/background2.png'
 import '../styles/Home.css';
 import InfoModal from '../components/InfoModal';
@@ -34,7 +34,7 @@ const Home = () => {
 
     return (
     <div className="home">
-        <img src={logo} className="logo-image" alt="logo" />
+        <Logo />
         <h2 className="logo-intro">Be confident knowing your vehicle is protected</h2>
         <button className="but1" onClick={() => {openModal()}}>Let's talk trackers</button>
     <div className="divider" />

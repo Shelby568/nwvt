@@ -3,14 +3,6 @@
     height: 970px;
     min-height: 500px;
     width: 100%;
-  border-top: 3px solid red;
-}
-
-.logo-image {
-  width: 400px;
-  position: absolute;
-  left: 50px;
-  top: 10px;
 }
 
 .logo-intro {

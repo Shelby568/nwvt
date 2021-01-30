@@ -1,9 +1,8 @@
 label {
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 10px;
-    color: red;
+    color: lightgray;
     font-size: 1rem;
     font-weight: bold;
 }
@@ -23,9 +22,16 @@ textarea {
     height: 90px;
 }
 
+form {
+    position: relative;
+    top: 150px;
+    right: 125px;
+}
+
 .contact {
     display: flex;
     justify-content: center;
+    border-top: 3px solid red;
 }
 
 .contact-form {
@@ -35,6 +41,13 @@ textarea {
 }
 
 .submit-button {
-    top: 50px;
+    top: 75px;
     left: 140px;
+}
+
+.contact-h1 {
+    position: relative;
+    top: 5px;
+    left: 9%;
+    font-size: 3rem;
 }

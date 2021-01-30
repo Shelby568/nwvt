@@ -1,49 +1,60 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../styles/Contact.css';
+import Logo from '../components/Logo';
 
 const Contact = () => {
-    const initialState = {
+
+    const [ formControl, setFormControl ] = useState({
         name: '',
         email: '',
         message: ''
-    }
+    });
 
-    const [ formControl, setFormControl ] = useState(initialState);
+    const [ result, setResult ] = useState(null);
 
-    const onNameChange = (event) => {
-        setFormControl({name: event.target.value})
-    };
-
-    const onEmailChange= (event) => {
-        setFormControl({email: event.target.value})
-    };
-
-    const onChangeMessage = (event) => {
-        setFormControl({message: event.target.value})
-    };
-
-    const handleSubmit = (event) => {
+    const handleSubmit = event => {
         event.preventDefault();
 
         axios
-            .post('http://localhost:3002/send')
+            .post('http://localhost:3002/send', { ...formControl })
             .then((response) => {
-                if (response.data.status === 'success') {
-                    alert('Message sent');
-                } else if (response.data.status === 'fail') {
-                    alert('Message failed to send')
-                }
-            })   
+                setResult(response.data);
+                setFormControl({
+                    name: '',
+                    email: '',
+                    message: ''
+                });
+            })
+            .catch(() => {
+                setResult({
+                    success: false,
+                    message: 'Oops, something went wrong. Please try again later'
+                });
+            }); 
+    };
+
+    const onInputChange = event => {
+        const { name, value } = event.target;
+
+        setFormControl({
+            ...formControl,
+            [name]: value
+        });
     };
 
 
     return (
     <div className="contact">
-        <form className="contact-form" onSubmit={handleSubmit} method="POST">
-        <input type="text" className="form-control" placeholder="Name" value={formControl.name} onChange={onNameChange} />
-        <input type="email" className="form-control" placeholder="email@domain.com" value={formControl.email} onChange={onEmailChange} />
-        <textarea className="form-control" rows="5" placeholder="Message" value={formControl.message} onChange={onChangeMessage}></textarea>
+        <Logo />
+        <h1 className="contact-h1">Contact us</h1>
+        <form className="contact-form" onSubmit={handleSubmit}>
+        <label htmlFor="name">Your name</label>
+        <input type="text" className="form-control" name="name" value={formControl.name} onChange={onInputChange} />
+        <label htmlFor="name">Your email</label>
+        <input type="text" className="form-control" name="email" value={formControl.email} onChange={onInputChange} />
+        <label htmlFor="name">Your message</label>
+        <textarea className="form-control" rows="5" name="message" value={formControl.message} onChange={onInputChange}></textarea>
         <button type="submit" className="submit-button">Submit</button>
         </form>
     </div>
