@@ -30,7 +30,7 @@ const Contact = () => {
         event.preventDefault();
 
         axios
-            .post('http://localhost:3002/send', { ...formControl })
+            .post('https://polar-retreat-73993.herokuapp.com/send', { ...formControl })
             .then((response) => {
                 setResult(response.data);
                 setFormControl({
