@@ -4,6 +4,7 @@ import axios from 'axios';
 import { GoLocation } from "react-icons/go";
 import { HiOutlinePhone, HiOutlineMail } from "react-icons/hi";
 import '../styles/Contact.css';
+import Alert from './Alert';
 
 const Contact = () => {
 
@@ -15,6 +16,15 @@ const Contact = () => {
     });
 
     const [ result, setResult ] = useState(null);
+
+    const initialState = {
+        alert: {
+            message: '',
+            isSuccess: false,
+        },
+    }
+
+    const [ alert, setAlert ] = useState(initialState);
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -29,10 +39,15 @@ const Contact = () => {
                     email: '',
                     message: ''
                 });
+                setAlert({
+                    isSuccess: true,
+                    message: 'Your message was successfully sent!'
+                });
             })
             .catch(() => {
-                setResult({
-                    success: false,
+                setResult('error');
+                setAlert({
+                    isSuccess: false,
                     message: 'Oops, something went wrong. Please try again later'
                 });
             }); 
@@ -51,6 +66,9 @@ const Contact = () => {
         <div className="contact">
         <NavBar />
         <div className="contact-page">
+        {alert.message && (
+          <Alert message={alert.message} success={alert.isSuccess} />
+        )}
         <div className="contact-para-wrapper">
         <div className="c-para">
         <p className="contact-para"><GoLocation className="icon" /> Manchester</p>

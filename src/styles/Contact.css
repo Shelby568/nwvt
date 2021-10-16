@@ -111,6 +111,11 @@
       text-decoration-color: #a90000;
   }
 
+  .Alert.error, .Alert.success {
+    background-color: #a90000;
+    color: white;
+}
+
   @media screen and (max-width: 600px) {
       .contact-form {
           flex-direction: column;
