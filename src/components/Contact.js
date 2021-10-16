@@ -45,7 +45,7 @@ const Contact = () => {
                 });
             })
             .catch(() => {
-                setResult('error');
+                setResult(result);
                 setAlert({
                     isSuccess: false,
                     message: 'Oops, something went wrong. Please try again later'
