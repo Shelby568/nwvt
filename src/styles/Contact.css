@@ -1,0 +1,153 @@
+
+.contact {
+    background: linear-gradient(to top, transparent 0%, #000 90%)
+}
+
+.contact-para-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.ch1 {
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.contact-h1 {
+    font-size: 2.25rem;
+}
+
+.icon {
+    color: #a90000;
+    font-size: 1.5rem;
+}
+
+.contact-para {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.wrapper {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     outline: none;
+     position: absolute;
+     top: 70%;
+     transform: translateY(-50%);
+     width: 100%;
+     padding: 0 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(22,22,22);
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+}
+
+.input-fields, .msg {
+    width: 48%;
+}
+
+.input-fields .input, .msg textarea {
+    margin: 10px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #ffffff;
+    padding: 10px;
+    color: #ffffff;
+    width: 100%;
+}
+
+.msg textarea {
+    height: 129px;
+}
+
+::-webkit-input-placeholder {
+    color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+::-moz-input-placeholder {
+    color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+::-ms-input-placeholder {
+    color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.submit-button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    text-decoration: underline;
+    text-underline-position: below;
+    text-underline-offset: 0.5em;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #ffffff;
+    text-transform: uppercase;
+    padding: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .submit-button:hover {
+      color: #a90000;
+      text-decoration-color: #a90000;
+  }
+
+  @media screen and (max-width: 600px) {
+      .contact-form {
+          flex-direction: column;
+      }
+
+      .wrapper {
+          padding: 5px;
+          top: 55%;
+      }
+
+      .msg textarea {
+          height: 40px;
+      }
+
+      .input-fields, .msg {
+          width: 100%;
+      }
+
+      .submit-button {
+          font-size: 0.75rem;
+      }
+
+      .contact-h1 {
+        font-size: 1.25rem;
+        padding-top: 0;
+      }
+
+      .contact-para-wrapper {
+          margin-top: 0;
+      }
+
+      .contact-para {
+          font-size: 0.70rem;
+      }
+
+      .icon {
+        font-size: 0.5rem;
+      }
+
+  }
