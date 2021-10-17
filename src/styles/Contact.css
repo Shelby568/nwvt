@@ -119,11 +119,13 @@
   @media screen and (max-width: 600px) {
       .contact-form {
           flex-direction: column;
+          max-width: 300px;
       }
 
       .wrapper {
           padding: 5px;
           top: 55%;
+          width: 95%;
       }
 
       .msg textarea {
@@ -140,7 +142,7 @@
 
       .contact-h1 {
         font-size: 1.25rem;
-        padding-top: 0;
+        padding-bottom: 10;
       }
 
       .contact-para-wrapper {
@@ -148,11 +150,11 @@
       }
 
       .contact-para {
-          font-size: 0.70rem;
+          font-size: 1rem;
       }
 
       .icon {
-        font-size: 0.5rem;
+        font-size: 0.75rem;
       }
 
   }

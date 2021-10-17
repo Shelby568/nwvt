@@ -41,6 +41,14 @@
   }
 
 @media screen and (max-width: 600px) {
+    body {
+        overflow: auto;
+    }
+
+    .about-wrapper {
+        height: 125vh;
+    }
+
     .cards {
         flex-direction: column;
     }
