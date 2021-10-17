@@ -46,7 +46,7 @@
     }
 
     .about-wrapper {
-        height: 125vh;
+        overflow-y: scroll;
     }
 
     .cards {
