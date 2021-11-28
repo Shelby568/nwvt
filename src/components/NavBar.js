@@ -26,6 +26,9 @@ const NavBar = () => {
                         <a href="/trackers">Trackers</a>
                     </li>
                     <li className="option" onClick={closeMobileMenu}>
+                        <a href="/platform">App</a>
+                    </li>
+                    <li className="option" onClick={closeMobileMenu}>
                         <a href="/contact-us">Contact Us</a>
                     </li>
                 </ul>

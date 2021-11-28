@@ -3,8 +3,12 @@ import NavBar from './NavBar';
 import axios from 'axios';
 import { GoLocation } from "react-icons/go";
 import { HiOutlinePhone, HiOutlineMail } from "react-icons/hi";
+import { BsFacebook } from "react-icons/bs";
 import '../styles/Contact.css';
 import Alert from './Alert';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+
 
 const Contact = () => {
 
@@ -62,6 +66,7 @@ const Contact = () => {
         });
     };
 
+
     return (
         <div className="contact">
         <NavBar />
@@ -71,9 +76,19 @@ const Contact = () => {
         )}
         <div className="contact-para-wrapper">
         <div className="c-para">
-        <p className="contact-para"><GoLocation className="icon" /> Manchester</p>
-        <p className="contact-para"><HiOutlinePhone className="icon" /> 01234 567890</p>
-        <p className="contact-para"><HiOutlineMail className="icon" /> email@email.com</p>
+        <Popup
+            trigger={<button className="popupButton"><GoLocation className="icon" /></button>} position="top center">
+                <p className="popupP">Manchester</p>
+            </Popup>
+            <Popup
+            trigger={<button className="popupButton"><HiOutlinePhone className="icon" /></button>} position="top center">
+                <p className="popupP">07923 875914</p>
+            </Popup>
+            <Popup
+            trigger={<button className="popupButton"><HiOutlineMail className="icon" /></button>} position="top center">
+                <p className="popupP">enquiries@nw-vt.co.uk</p>
+            </Popup>
+        <a href="https://www.facebook.com/North-West-Vehicle-Trackers-2533384683554739/"><BsFacebook className="icon" /> </a>
         </div>
         </div>
         <div className="ch1">
