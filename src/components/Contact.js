@@ -66,7 +66,7 @@ const Contact = () => {
         });
     };
 
-
+   
     return (
         <div className="contact">
         <NavBar />
@@ -76,23 +76,58 @@ const Contact = () => {
         )}
         <div className="contact-para-wrapper">
         <div className="c-para">
-        <Popup
-            trigger={<button className="popupButton"><GoLocation className="icon" /></button>} position="top center">
-                <p className="popupP">Manchester</p>
+            <Popup trigger={<button className="popupButton"><GoLocation className="icon" /></button>} modal nested>
+                {close => (
+                    <div className="modal">
+                        <button className="close" onClick={close}>
+                            &times;
+                        </button>
+                        <div className="modal-header">
+                        <GoLocation className="icon" />
+                        </div>
+                        <div className="content">
+                            Based in Manchester, we cover the Greater Manchester and surrounding areas! Contact us now for your free, no obligation quote
+                        </div>
+                    </div>
+                )}
+            </Popup>
+            <Popup trigger={<button className="popupButton"><HiOutlinePhone className="icon" /></button>} modal>
+                {close => (
+                    <div className="modal">
+                        <button className="close" onClick={close}>
+                            &times;
+                        </button>
+                        <div className="modal-header">
+                        <HiOutlinePhone className="icon" />
+                        </div>
+                        <div className="content">
+                            You can call or drop us a message on <b> 07923 875914</b>
+                        </div>
+                    </div>
+                )}
             </Popup>
             <Popup
-            trigger={<button className="popupButton"><HiOutlinePhone className="icon" /></button>} position="top center">
-                <p className="popupP">07923 875914</p>
+            trigger={<button className="popupButton"><HiOutlineMail className="icon" /></button>} modal nested>
+                {close => (
+                    <div className="modal">
+                        <button className="close" onClick={close}>
+                            &times;
+                        </button>
+                        <div className="modal-header">
+                        <HiOutlineMail className="icon" />
+                        </div>
+                        <div className="content">
+                            You can email us directly on <a href="mailto:enquiries@nw-vt.co.uk">enquiries@nw-vt.co.uk</a> or use the form below to send us a message
+                        </div>
+                    </div>
+                )}
             </Popup>
-            <Popup
-            trigger={<button className="popupButton"><HiOutlineMail className="icon" /></button>} position="top center">
-                <p className="popupP">enquiries@nw-vt.co.uk</p>
-            </Popup>
+
         <a href="https://www.facebook.com/North-West-Vehicle-Trackers-2533384683554739/"><BsFacebook className="icon" /> </a>
         </div>
         </div>
         <div className="ch1">
-        <h3 className="contact-h1">Send us a message..</h3>
+        <h3 className="contact-h3">Send us a message..</h3>
         </div>
         <div className="wrapper">
         <form className="contact-form" onSubmit={handleSubmit}>

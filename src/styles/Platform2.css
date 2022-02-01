@@ -1,0 +1,34 @@
+.platform {
+    overflow: auto;
+}
+
+.platform-images {
+   background-color: #FFF;
+}
+
+.platform-img {
+    height: 800px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.platform-g1 {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.platform-g2 {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+@media screen and (max-width: 600px) {
+    .platform-g1,
+    .platform-g2 {
+        flex-direction: column;
+    }
+}

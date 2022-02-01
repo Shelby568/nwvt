@@ -16,13 +16,8 @@
    padding: 10px;
 }
 
-
-.check, .info-icon {
-    color: #a90000;
-}
-
-.info-icon {
-    font-size: 3rem;
+.cardImg {
+    height: 150px;
 }
 
 .cards {

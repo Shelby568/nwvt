@@ -1,6 +1,7 @@
 import React from 'react';
-import { BsPersonFill } from "react-icons/bs";
-import { FaCarSide, FaTruck } from "react-icons/fa";
+import cardImgOne from '../images/service.svg';
+import cardImgTwo from '../images/asset.svg';
+import cardImgThree from '../images/car.svg';
 import NavBar from './NavBar';
 import '../styles/About.css';
 
@@ -11,24 +12,21 @@ const About = () => {
         <div className="about-wrapper">
         <div className="cards">
         <div className="card1">
-        <FaCarSide className="info-icon" />
-        <h1>Vehicle</h1>
-        <p className="info">We offer a wide range of advanced vehicle tracking devices to allow our
-        customers to locate any vehicles, cars, buses, motorbikes, scooters, vans or trucks in real-time,
-        anywhere in the world using a PC, tablet or smartphones.</p>
+        <img className="cardImg" src={cardImgOne} alt="car" />
+        <h1>Service Providers</h1>
+        <p className="info">Better monitor and manage vehicle-related information, keep abreast of the state of the car, 
+        better serve others and protect their own interests. It can be applied to passenger transportation, auto finance and other industries.</p>
         </div>
         <div className="card2">
-        <FaTruck className="info-icon" />
-        <h1>Asset</h1>
-        <p className="info">Asset trackers give customers great peace of mind by allowing them to track
-        the location of their assets in real-time and to place additional safeguards to prevent loss of
-        valuable equipment and asset theft.</p>
+        <img className="cardImg" src={cardImgTwo} alt="car" />
+        <h1>Fleet Vehicles</h1>
+        <p className="info">For the enterprise industry with a large number of vehicles, our GPS tracking system 
+        can provide unified supervision of these vehicles, save fuel and other operating costs for the fleet and improve employee productivity, including automotive leasing ,logistics and other industries.</p>
         </div>
         <div className="card3">
-        <BsPersonFill className="info-icon" />
-        <h1>Personal</h1>
-        <p className="info">We offer personal GPS tracking devices for customers who want to keep track
-        of their loved ones. It can be used for tracking children, family members, pets or personal items like luggage.</p>
+        <img className="cardImg" src={cardImgThree} alt="car" />
+        <h1>Personal Assets</h1>
+        <p className="info">Realising the interaction between people and vehicles, we help users to grasp the location of their vehicles anytime and anywhere, in order to prevent theft and other situations.</p>
         </div>
      </div>
      </div>
