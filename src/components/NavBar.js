@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BiMenuAltRight } from "react-icons/bi";
 import { MdClose } from "react-icons/md";
-import Logo from './Logo';
+import Logo from '../images/NWVT LOGO.png';
 import '../styles/NavBar.css';
 
 const NavBar = () => {
@@ -15,7 +15,7 @@ const NavBar = () => {
             <div className="logo-nav">
                 <div className="logo-container">
                     <a href="/">
-                       <Logo />
+                       <img className="logo" src={Logo} alt="logo" />
                     </a>
                 </div>
                 <ul className={menuClick ? "nav-options active" : "nav-options"}>

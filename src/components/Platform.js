@@ -15,20 +15,14 @@ const Platform = () => {
             <h3 className="platform-h3">Features:</h3>
             <ul className="platform-list">
                 <li className="platform-list-item"><span><h4>Alarms and Notifications</h4>
-                <p className="platform-list-info">Allows users to set up alarms to get instantly notified for events you consider important.</p>
+                <p className="platform-list-info">Set up alarms to get instantly notified for events like speeding, vibration, power off and many more.</p>
                 </span></li>
                 <li className="platform-list-item"><span><h4>ACC Detection</h4>
                 <p className="platform-list-info">Always keeps you informed of the ACC status of your vehicle.</p></span></li>
                 <li className="platform-list-item"><span><h4>Remote Cut-off</h4>
-                <p className="platform-list-info">Immobilise a vehicle by cutting it remotely via the app</p></span></li>
-                <li className="platform-list-item"><span><h4>Speeding Alarm</h4>
-                <p className="platform-list-info">When the vehicle is over-speeding, then it will be detected and send an alarm.</p></span></li>
+                <p className="platform-list-info">Immobilise your vehicle by cutting it remotely via the app</p></span></li>
                 <li className="platform-list-item"><span><h4>Geo-fence</h4>
                 <p className="platform-list-info">A virtual area set on the app, you‘ll be informed when the vehicle crosses its boundary.</p></span></li>
-                <li className="platform-list-item"><span><h4>Vibration Alarm</h4>
-                <p className="platform-list-info">With built-in vibration sensor, an alarm will be sent immediately when the vehicle has abnormal vibration.</p></span></li>
-                <li className="platform-list-item"><span><h4>Power Off Alarm</h4>
-                <p className="platform-list-info">Alerts when vehicle is powered off.</p></span></li>
                 <li className="platform-list-item"><span><h4>Trip Logging</h4>
                 <p className="platform-list-info">Playback functionality for 3 months of trip logging.</p></span></li>
             </ul>

@@ -55,6 +55,10 @@ li a {
 
 @media screen and (max-width: 800px) {
 
+    .logo {
+        width: 125px;
+    }
+
     .header {
         padding: 0px 10px;
     }
