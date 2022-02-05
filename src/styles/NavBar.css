@@ -105,3 +105,9 @@ li a {
         display: block;
     }
 }
+
+@media screen and (min-width: 801px) and (max-width: 900px) {
+    .logo {
+        width: 175px;
+    }
+ }

@@ -40,8 +40,13 @@
         overflow: auto;
     }
 
+    .about {
+        height: 35vh;
+    }
+
     .about-wrapper {
-        overflow-y: scroll;
+        background-color: #ffffff;
+        height: auto;
     }
 
     .cards {
