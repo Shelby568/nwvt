@@ -21,7 +21,7 @@ const About = () => {
         <img className="cardImg" src={cardImgTwo} alt="car" />
         <h1>Fleet Vehicles</h1>
         <p className="info">For the enterprise industry with a large number of vehicles, our GPS tracking system 
-        can provide unified supervision of these vehicles, save fuel and other operating costs for the fleet and improve employee productivity, including automotive leasing ,logistics and other industries.</p>
+        can provide unified supervision of these vehicles, save fuel and other operating costs for the fleet and improve employee productivity, including automotive leasing, logistics and other industries.</p>
         </div>
         <div className="card3">
         <img className="cardImg" src={cardImgThree} alt="car" />
