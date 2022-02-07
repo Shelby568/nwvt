@@ -86,7 +86,7 @@ const Contact = () => {
                         <GoLocation className="icon" />
                         </div>
                         <div className="content">
-                            Based in Manchester, we cover the Greater Manchester and surrounding areas! Contact us now for your free, no obligation quote
+                            Based in Bury, we cover the Greater Manchester and surrounding areas. Contact us now for your free, no obligation quote!
                         </div>
                     </div>
                 )}
@@ -101,7 +101,7 @@ const Contact = () => {
                         <HiOutlinePhone className="icon" />
                         </div>
                         <div className="content">
-                            You can call or drop us a message on <b> 07923 875914</b>
+                            You can call or drop us a message on <b> 07719 490204</b>
                         </div>
                     </div>
                 )}
