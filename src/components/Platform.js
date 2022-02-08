@@ -9,7 +9,7 @@ const Platform = () => {
             <NavBar />
             <div className="platform-wrapper">
                 <div className="platform-card">
-        <img className="platform-img" src={ptrack0Img} alt="App functionality" />
+        <img className="platform-img" src={ptrack0Img} alt="NWVT App Funtionality" />
         <div className="platform-content">
             <h1 className="platform-h1">iOS and Android Tracking App</h1>
             <h3 className="platform-h3">Features:</h3>

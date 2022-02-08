@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { BiMenuAltRight } from "react-icons/bi";
 import { MdClose } from "react-icons/md";
 import Logo from '../images/NWVT LOGO.png';
@@ -14,22 +15,22 @@ const NavBar = () => {
         <div className="header">
             <div className="logo-nav">
                 <div className="logo-container">
-                    <a href="/">
-                       <img className="logo" src={Logo} alt="logo" />
-                    </a>
+                    <Link to="/">
+                       <img className="logo" src={Logo} alt="NWVT logo" />
+                    </Link>
                 </div>
                 <ul className={menuClick ? "nav-options active" : "nav-options"}>
                     <li className="option" onClick={closeMobileMenu}>
-                        <a href="/">Home</a>
+                        <Link to="/">Home</Link>
                     </li>
                     <li className="option" onClick={closeMobileMenu}>
-                        <a href="/trackers">Trackers</a>
+                        <Link to="/trackers">Trackers</Link>
                     </li>
                     <li className="option" onClick={closeMobileMenu}>
-                        <a href="/platform">App</a>
+                        <Link to="/platform">App</Link>
                     </li>
                     <li className="option" onClick={closeMobileMenu}>
-                        <a href="/contact-us">Contact Us</a>
+                        <Link to="/contact-us">Contact Us</Link>
                     </li>
                 </ul>
             </div>
