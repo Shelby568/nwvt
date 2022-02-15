@@ -65,7 +65,7 @@ const Contact = () => {
             [name]: value
         });
     };
-
+    
    
     return (
         <div className="contact">
@@ -74,6 +74,9 @@ const Contact = () => {
         {alert.message && (
           <Alert message={alert.message} success={alert.isSuccess} />
         )}
+        <div className="ch1">
+        <h1 className="contact-h1">Get in touch..</h1>
+        </div>
         <div className="contact-para-wrapper">
         <div className="c-para">
             <Popup trigger={<button className="popupButton"><GoLocation className="icon" /></button>} modal nested>
@@ -86,7 +89,7 @@ const Contact = () => {
                         <GoLocation className="icon" />
                         </div>
                         <div className="content">
-                            Based in Bury, we cover the Greater Manchester and surrounding areas. Contact us now for your free, no obligation quote!
+                            We are based in Manchester and cover most of the North West. Contact us now for your free, no obligation quote!
                         </div>
                     </div>
                 )}
@@ -101,7 +104,7 @@ const Contact = () => {
                         <HiOutlinePhone className="icon" />
                         </div>
                         <div className="content">
-                            You can call or drop us a message on <b> 07719 490204</b>
+                            You can call or drop us a message on <b><a href="tel:+07719490204">07719 490204</a></b>
                         </div>
                     </div>
                 )}
@@ -125,9 +128,6 @@ const Contact = () => {
 
         <a href="https://www.facebook.com/North-West-Vehicle-Trackers-2533384683554739/"><BsFacebook className="icon" /> </a>
         </div>
-        </div>
-        <div className="ch1">
-        <h3 className="contact-h3">Send us a message..</h3>
         </div>
         <div className="wrapper">
         <form className="contact-form" onSubmit={handleSubmit}>

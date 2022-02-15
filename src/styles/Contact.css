@@ -6,7 +6,7 @@
 .contact-para-wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 75px;
 }
 
 
@@ -16,9 +16,8 @@
     color: #ffffff;
 }
 
-.contact-h3 {
-    font-size: 2.25rem;
-    margin-top: 75px;
+.contact-h1 {
+    font-size: 3rem;
 }
 
 .icon {
@@ -183,14 +182,14 @@
           width: 100%;
       }
 
+      .input-fields .input, .msg textarea {
+        border-bottom: 0.5px solid #ffffff;
+      }
+
       .submit-button {
           font-size: 0.75rem;
       }
 
-      .contact-h1 {
-        font-size: 1.25rem;
-        padding-top: 10px;
-      }
 
       .contact-para-wrapper {
           margin-top: 0;
@@ -201,7 +200,7 @@
       }
 
       .icon {
-        font-size: 2rem;
+        font-size: 3rem;
         padding-top: 60px;
       }
 
