@@ -52,6 +52,7 @@
     border-radius: 5px;
     display: flex;
     box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    margin-top: 25px;
 }
 
 .input-fields {
@@ -183,13 +184,16 @@
       }
 
       .input-fields .input, .msg textarea {
-        border-bottom: 0.5px solid #ffffff;
+        border-bottom: 0.1px solid #ffffff;
       }
 
       .submit-button {
           font-size: 0.75rem;
       }
 
+      .ch1 {
+          display: none;
+      }
 
       .contact-para-wrapper {
           margin-top: 0;
